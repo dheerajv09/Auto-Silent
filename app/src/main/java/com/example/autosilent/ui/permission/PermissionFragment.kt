@@ -12,7 +12,7 @@ import com.example.autosilent.R
 import com.example.autosilent.databinding.FragmentPermissionBinding
 import com.example.autosilent.util.ExtensionFunctions.observeOnce
 import com.example.autosilent.util.Permissions
-import com.example.autosilent.viewmodels.SharedViewModel
+import com.example.autosilent.viewmodels.GeofenceViewModel
 import com.vmadalin.easypermissions.EasyPermissions
 import com.vmadalin.easypermissions.dialogs.SettingsDialog
 
@@ -21,7 +21,7 @@ class PermissionFragment : Fragment(), EasyPermissions.PermissionCallbacks {
     private var _binding: FragmentPermissionBinding? = null
     private val binding get() = _binding!!
 
-    private val sharedViewModel: SharedViewModel by activityViewModels()
+    private val geofenceViewModel: GeofenceViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -43,10 +43,10 @@ class PermissionFragment : Fragment(), EasyPermissions.PermissionCallbacks {
     }
 
     private fun checkFirstLaunch() {
-        sharedViewModel.readFirstLaunch.observeOnce(viewLifecycleOwner) { firstLaunch ->
+        geofenceViewModel.readFirstLaunch.observeOnce(viewLifecycleOwner) { firstLaunch ->
             if (firstLaunch) {
                 findNavController().navigate(R.id.action_permissionFragment_to_showPlacesFragment)
-                sharedViewModel.saveFirstLaunch(false)
+                geofenceViewModel.saveFirstLaunch(false)
             } else {
                 findNavController().navigate(R.id.action_permissionFragment_to_showPlacesFragment)
             }
