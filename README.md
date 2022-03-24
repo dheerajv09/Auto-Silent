@@ -29,22 +29,17 @@ Add the key to the resource-file google_api.xml by replacing YOUR_API_KEY with t
 </resources>
 ```
 
-## Features
+## Screensots
 
-- Create rules to automatically switch to vibrate mode or silent mode
-- Schedule Rules will silence your phone at a specific time in your weekly schedule
-- Calendar Rules will silence your phone during calendar events
-- Match all events in your calendar or match specific events based on keywords in the event title or description
+<p float="left">
+    <img src="screenshots/1.jpeg" alt="Screenshot" width="200" height="auto">
+    <img src="screenshots/2.jpeg" alt="Screenshot" width="200" height="auto">
+    <img src="screenshots/3.jpeg" alt="Screenshot" width="200" height="auto">
+    <img src="screenshots/4.jpeg" alt="Screenshot" width="200" height="auto">
+</p>
 
-## Technologies
-
-- Android SDK v28 (min v21)
-- Kotlin 1.3.21
-- Dagger 2.20
-- Lifecycle 2.2.0
-- Room 2.0.0
-- Coroutines 1.1.1
-  
-//https://github.com/sorianog/TreasureHuntApp
-https://github.com/StephGit/EazyTime/blob/master/README.md
-https://github.com/DenisFerreira/GeoFences
+<p float="left">
+    <img src="screenshots/5.jpeg" alt="Screenshot" width="200" height="auto">
+    <img src="screenshots/6.jpeg" alt="Screenshot" width="200" height="auto">
+    <img src="screenshots/7.jpeg" alt="Screenshot" width="200" height="auto">
+</p>
